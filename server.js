@@ -5,7 +5,9 @@ const { createHandler } = require("graphql-http/lib/use/express");
 const cors=require("cors")
 
 const app = express();
-app.use(cirs())
+app.use(cors({
+  origin: '*'
+}));
 app.use(
   "/graphql",
   
